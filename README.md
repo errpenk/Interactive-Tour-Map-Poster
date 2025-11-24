@@ -17,8 +17,8 @@ B. Tour Stop Markers
 
 2. Click / Selection Mode:
   "Spotlight" Effect: When you click on a station:
-      Current station: Enlarges and becomes solid blue, moving to the top of the map hierarchy.
-      Other stations: Shrinks and becomes grayish-transparent, creating a sense of depth and highlighting the currently selected city.
+      2.1. Current station: Enlarges and becomes solid blue, moving to the top of the map hierarchy.
+      2.2. Other stations: Shrinks and becomes grayish-transparent, creating a sense of depth and highlighting the currently selected city.
 
 
 C. UI Controls
