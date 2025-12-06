@@ -1,0 +1,30 @@
+:root {
+    /* ... 保持所有 CSS 变量和样式不变 ... */
+    --main-blue: #005ac0;
+    --main-black: #000000;
+    --bg-white: #ffffff;
+    --map-bg-gray: #f9f9f9; 
+    --font-main: 'Inter', sans-serif;
+    --font-tech: 'JetBrains Mono', monospace;
+    --grid-line-color: #e0e0e0;
+}
+
+/* ... 所有 CSS 样式，从 *{} 到 @media query 全部放在这里 ... */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* ... */
+}
+/* ... 所有的 .poster-container, .bg-supergraphic, .header-bar, .swiss-grid, .artwork-area 等样式 ... */
+.leaflet-popup-content-wrapper { border-radius: 0; font-family: var(--font-tech); background: white; border: 1px solid var(--main-blue); }
+.leaflet-popup-content { font-size: 0.7rem; margin: 8px 10px; }
+.leaflet-popup-tip { background: var(--main-blue); }
+
+@media (max-width: 500px) {
+    /* ... 媒体查询样式 ... */
+}
