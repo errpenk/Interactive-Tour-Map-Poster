@@ -1,3 +1,6 @@
+<!-- retain the DOM structure and resource references -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELOCITY - 2025 Global Tour</title>
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
     <div class="poster-container">
-        
+        <!-- 背景装饰 -->
         <div class="bg-supergraphic">04</div>
         <div class="bg-stripes"></div>
         <div class="guide-lines">
@@ -26,6 +32,7 @@
 
         <div class="content-wrapper">
             
+            <!-- 头部信息 -->
             <div class="header-bar">
                 <div class="band-info">
                     <div class="band-name">Velocity</div>
@@ -37,6 +44,7 @@
                 <div class="year-square"><span>20</span><span>25</span></div>
             </div>
 
+            <!-- 标题 -->
             <div class="title-container">
                 <div class="main-title">
                     <span class="text-blue">Italy</span><span>Tour</span>
@@ -44,6 +52,7 @@
                 <div class="title-deco-line"></div>
             </div>
 
+            <!-- 瑞士网格布局列表 -->
             <div class="swiss-grid">
                 <div class="grid-col">
                     <div class="col-header"><span>Intro</span><span class="col-idx">01</span></div>
@@ -55,6 +64,7 @@
                         <span>DUR: 120M</span><span>TYPE: GEN/ADM</span><span class="meta-label">STATUS: CONFIRMED</span>
                     </div>
                 </div>
+                <!-- 列表数据也可以由 JS 生成，但为了 SEO 保留在 HTML 中也是对的 -->
                 <div class="grid-col right-align">
                     <div class="col-header"><span class="col-idx">02</span><span>Nov</span></div>
                     <ul class="col-body">
@@ -80,5 +90,62 @@
                 </div>
             </div>
 
+            <!-- 地图区域 -->
             <div class="artwork-area">
-                <div class="
+                <div class="map-ui-modern">
+                    <div class="control-panel">
+                        <div class="panel-header"><span>Zoom In</span><div class="status-light"></div></div>
+                        <div class="zoom-value" id="zoom-text">1x</div>
+                        <div class="zoom-track" id="zoom-track">
+                            <div class="zoom-progress" id="zoom-fill"></div>
+                            <div class="zoom-knob" id="zoom-knob"></div>
+                        </div>
+                    </div>
+                    <button class="btn-tech" id="reset-btn">Rest. View</button>
+                </div>
+
+                <div id="map"></div>
+                
+                <!-- 地图装饰源 (隐藏) -->
+                <div id="map-decorations-source" style="display:none;">
+                    <div class="map-overlay-internal">
+                        <div class="map-grid-lines"></div>
+                        <div class="map-radar"></div>
+                        <div class="map-bracket mb-tl"></div>
+                        <div class="map-bracket mb-tr"></div>
+                        <div class="map-bracket mb-bl"></div>
+                        <div class="map-bracket mb-br"></div>
+                        
+                        <div class="map-vertical-text">
+                             <span>SERIES_04</span><span>//</span><span>VELOCITY</span>
+                        </div>
+
+                        <div class="map-top-scale">
+                            <div class="scale-tick"></div><div class="scale-tick"></div><div class="scale-tick"></div>
+                            <div class="scale-num" style="left:0">010</div>
+                            <div class="scale-num" style="left:50%">020</div>
+                            <div class="scale-num" style="right:0">030</div>
+                        </div>
+
+                        <div class="map-ruler">
+                            <div class="ruler-dash long"></div><div class="ruler-dash"></div><div class="ruler-dash"></div>
+                            <div class="ruler-dash long"></div><div class="ruler-dash"></div><div class="ruler-dash"></div>
+                            <div class="ruler-dash long"></div>
+                        </div>
+
+                        <div class="map-label ml-1">+ 45.00</div>
+                        <div class="map-label ml-2">DATA_LINK: ACTIVE</div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
+    <!-- Leaflet JS Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Main Application Logic -->
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
