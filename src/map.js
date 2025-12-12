@@ -1,5 +1,6 @@
 import { ITALY_CENTER, MIN_ZOOM, MAX_ZOOM, ITALY_BOUNDS, GEOJSON_URL, tourStops } from './data.js';
 
+
 // --- MAP INIT ---
 export const map = L.map('map', {
     center: ITALY_CENTER,
@@ -14,6 +15,7 @@ export const map = L.map('map', {
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
     maxZoom: 19, subdomains: 'abcd'
 }).addTo(map);
+
 
 // --- MAP DECORATIONS INJECTION ---
 const decorSource = document.getElementById('map-decorations-source');
