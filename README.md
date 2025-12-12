@@ -1,29 +1,18 @@
-# Interaction instructions
+## Interaction Instructions
 
-A. Core Map Interaction
-1. Pan & Zoom:
-   Users can drag the map (pan).
-   Users can zoom using the mouse wheel or trackpad.
-2. Limiting Boundaries:
-   The code sets `maxBounds` to prevent dragging outside of Italy, maintaining visual focus.
-3. Stylized Layers:
-   The map is overlaid with a noise filter and a multiply blending mode.
+### A. Core Map Interaction
+*   **Pan & Zoom**: Users can navigate by dragging the map (pan) and change the scale using the mouse wheel or trackpad (zoom).
+*   **Limiting Boundaries**: The viewport is constrained by `maxBounds`, preventing users from panning outside the Italian region to maintain visual focus.
+*   **Stylized Layers**: The map rendering includes a custom noise filter and multiply blending modes to simulate a printed, textured aesthetic.
 
-B. Tour Stop Markers
-1. Hover / Mouseover:
-   When the mouse hovers over a blue dot, a popup appears displaying the date, city, and venue.
-2. Click / Selection Mode:
-   When users click on a point, that point turns solid blue, creating a sense of depth and highlighting the currently selected city.
+### B. Tour Stop Markers
+*   **Hover State**: Hovering over a marker reveals a popup containing the specific tour date, city name, and venue.
+*   **Selection Mode**: Clicking a marker activates it. The selected point enlarges and turns solid blue to indicate depth, while other markers dim to highlight the current selection.
 
-C. UI Controls
-1. Zoom Track:
-   Users can directly click anywhere on the progress bar to smoothly zoom the map to the corresponding level.
-2. Reset Button:
-   Clicking this button returns the map to its initial center point (central Italy) and initial zoom level, resetting all selected states.
-3. Status Indicator:
-   A green breathing light animation is present in the upper right corner of the panel.
+### C. UI Controls
+*   **Zoom Track**: The custom progress bar is interactive—users can click anywhere on the track to jump directly to a specific zoom level.
+*   **Reset Button**: Clicking **"REST. VIEW"** returns the map to its initial coordinates (Central Italy) and zoom factor, resetting all marker states.
+*   **Status Indicator**: A decorative "breathing" green light in the panel header adds to the system's "live" interface aesthetic.
 
-
-D. Visual Feedback
-1. Hide Decorations During Zooming:
-   When users start zooming (zoomstart), the map's decorative layer disappears to avoid visual interference during the zooming process.
+### D. Visual Feedback
+*   **Dynamic Overlay**: To ensure visual clarity, decorative elements (grids, radar lines) automatically hide when a zoom action starts (`zoomstart`) and reappear once the movement settles (`zoomend`).
